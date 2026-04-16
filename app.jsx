@@ -1,4 +1,5 @@
-const { useState, useEffect, useRef } = React;
+import React, { useState, useEffect, useRef } from 'react';
+import ReactDOM from 'react-dom/client';
 
 const USER_ID = "hackathon_demo_v2";
 
@@ -321,4 +322,8 @@ function GaugeBar({ label, value, barClass }) {
 }
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<App />);
+root.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
